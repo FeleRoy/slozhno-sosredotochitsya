@@ -14,6 +14,7 @@
   /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
   font-family: IBM Plex Mono, sans-serif;
   font-size: 18px;
+  font-weight: 700;
   background-color: var(--page-color);
 }
 /*-------------------- ШАПКА ------------------------- */
@@ -82,7 +83,6 @@ header {
   height: 117px;
   margin: 10px;
   margin-top: calc(55 / 668 * 100vh);
-  background-color: var(--background-text-color);
 }
 .cover__description-text {
   font-weight: 700;
@@ -91,6 +91,7 @@ header {
 }
 .title-decor {
   color: var(--header-text-color);
+  background-color: var(--background-text-color);
 }
 
 .decorated-zone::before {
@@ -205,5 +206,57 @@ header {
 /*-------------------- ШАПКА ------------------------- */
 
 /*--------------- Основной контент ------------------- */
+/* Ссылка */
+.link {
+  text-decoration: none;
+  text-shadow: 1px 1px 0 var(--accent-color); 
+}
+.link:hover {
+  border-bottom: 1px solid var(--card-text-color);
+}
+.link:focus {
+  outline: none;
+  border: 1px solid var(--card-text-color);
+}
+/* Ссылка */
+
+.section {
+  margin-bottom: 51px;
+}
+.section__title {
+  color: var(--section__title-color);
+  font-size: 18px;
+  margin: 40px 10px 20px;
+}
+.section__card-list {
+  margin: 10px;
+}
+
+.card__title {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 23.4px;
+  text-align: left;
+}
+.card__text {
+  color: var(--card-text-color);
+  margin-top: 10px;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 23.4px;
+}
+.section__card-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.title-bold {
+  font-weight: bold;
+  color: var(--bold-text-color);
+  margin: 10px;
+  margin-bottom: 20px;
+}
+
 
 /*--------------- Основной контент ------------------- */
