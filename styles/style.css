@@ -275,14 +275,14 @@
     margin-bottom: 69px;
     margin-left: 10px;
   }
-  .first-title {
+  .margin-title {
     margin-top: 10px;
     margin-left: 10px;
   }
-  .first-list {
+  .margin-list {
     margin-left: 16px;
   }
-  .second-title {
+  .width-title {
     width: 236px;
     height: 70px;
   }
@@ -318,11 +318,11 @@
     margin-right: 10px;
     margin-left: 10px;
   }
-  .first-title {
+  .margin-title {
     margin-top: 10px;
     margin-left: 10px;
   }
-  .second-title {
+  .width-title {
     width: calc(1 / 3 * 100%);
     height: 70px;
     margin-bottom: 16px;
