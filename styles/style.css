@@ -1,13 +1,34 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 @media (prefers-color-scheme: dark) {
   .page {
+    --page-color: #000028;
     --main-color: #db00ff;
+    --accent-color: #ff0070;
+    --header-text-color: #000028;
+    --background-image: url(../images/cover-image-dark.png);
+    --button-color: #ff0070;
+    --button-hover-color: rgb(255, 0, 112, 0.4);
+    --record-visibility: visible;
+    --section__title-color: #ff0070;
+    --card-text-color: #F1B2CE;
+    --bold-text-color: #000028;
   }
 }
 
 @media (prefers-color-scheme: light) {
   .page {
+    --page-color: #fff1f7;
     --main-color: #ffc2e6;
+    --accent-color: #ff0070;
+    --header-text-color: #353430;
+    --background-image: url(../images/cover-image-light.png);
+    --button-color: #353430;
+    --background-text-color: #ff8dcb;
+    --record-visibility: hidden;
+    --button-hover-color: rgb(53, 52, 48, 0.4);
+    --section__title-color: #353430;
+    --card-text-color: #353430;
+    --bold-text-color: #353430;
   }
 }
 .page {
@@ -344,7 +365,7 @@ header {
   margin: 10px;
 }
 .gallery  .card__title{
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 .section__gallery-list {
   display: flex;
@@ -359,12 +380,15 @@ header {
   
   .gallery {
     padding-top: 20px;
-    margin: 20px;
+    
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 60px;
   }
   .section__gallery-list {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 192px 250px 318px;
+    grid-template-rows: 192px 230px 318px;
     gap: 20px;
     grid-template-areas: 
     "first first second"
@@ -396,7 +420,8 @@ header {
 
 }
 @media (width >= 1024px) and (height >= 768px) {
-  .gallery {
+  .section__gallery-list {
+    grid-template-rows: 260px 315px 428px;
   }
 }
 
