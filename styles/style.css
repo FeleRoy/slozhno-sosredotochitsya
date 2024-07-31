@@ -357,7 +357,7 @@ header {
   margin: 10px;
 }
 .gallery .card__title {
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 .section__gallery-list {
   display: flex;
@@ -369,6 +369,9 @@ header {
   height: 100%;
 }
 @media (width >= 768px) {
+  .gallery .card__title {
+    margin-bottom: 20px;
+  }
   .gallery {
     margin-right: 20px;
     margin-bottom: 60px;
