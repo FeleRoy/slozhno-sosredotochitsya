@@ -21,4 +21,24 @@
   --section__title-color: #353430;
   --card-text-color: #353430;
   --bold-text-color: #353430;
+  --link-shadow-color: #FF8DCB;
+
+}
+
+@media (prefers-color-scheme: light) {
+  .page {
+    --page-color: #fff1f7;
+    --main-color: #ffc2e6;
+    --accent-color: #ff0070;
+    --header-text-color: #353430;
+    --background-image: url(../images/cover-image-light.png);
+    --button-color: #353430;
+    --background-text-color: #ff8dcb;
+    --record-visibility: hidden;
+    --button-hover-color: rgb(53, 52, 48, 0.4);
+    --section__title-color: #353430;
+    --card-text-color: #353430;
+    --bold-text-color: #353430;
+    --link-shadow-color: #FF8DCB;
+  }
 }

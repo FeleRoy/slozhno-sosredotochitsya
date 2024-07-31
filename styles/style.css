@@ -1,60 +1,30 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
-@media (prefers-color-scheme: dark) {
-  .page {
-    --page-color: #000028;
-    --main-color: #db00ff;
-    --accent-color: #ff0070;
-    --header-text-color: #000028;
-    --background-image: url(../images/cover-image-dark.png);
-    --button-color: #ff0070;
-    --button-hover-color: rgb(255, 0, 112, 0.4);
-    --record-visibility: visible;
-    --section__title-color: #ff0070;
-    --card-text-color: #f1b2ce;
-    --bold-text-color: #000028;
-  }
-}
 
-@media (prefers-color-scheme: light) {
-  .page {
-    --page-color: #fff1f7;
-    --main-color: #ffc2e6;
-    --accent-color: #ff0070;
-    --header-text-color: #353430;
-    --background-image: url(../images/cover-image-light.png);
-    --button-color: #353430;
-    --background-text-color: #ff8dcb;
-    --record-visibility: hidden;
-    --button-hover-color: rgb(53, 52, 48, 0.4);
-    --section__title-color: #353430;
-    --card-text-color: #353430;
-    --bold-text-color: #353430;
-  }
-}
 .page {
   /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
   font-family: IBM Plex Mono, sans-serif;
   font-weight: 700;
   font-size: 18px;
-  background-color: var(--page-color);
-  background-attachment: fixed
+  background-image: var(--background-image);
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
 }
 /*-------------------- ШАПКА ------------------------- */
-header {
+.header {
   position: relative;
   display: flex;
   flex-direction: column;
   height: 100vh;
-  background-image: var(--background-image);
   background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
+  justify-content: space-between;
 }
 
 .header__theme-menu {
   display: flex;
   justify-content: end;
   padding-top: calc(75 / 668 * 100vh);
+  margin-bottom: 10px;
 }
 
 .header__theme-menu-list {
@@ -90,7 +60,7 @@ header {
   pointer-events: none;
 }
 .header__title {
-  padding-top: 65px;
+  
   padding-left: 10px;
   color: var(--main-color);
   font-weight: 700;
@@ -102,9 +72,9 @@ header {
 .cover__description {
   align-self: flex-end;
   width: 355px;
-  height: 117px;
-  margin: 10px;
-  margin-top: calc(55 / 668 * 100vh);
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: calc(66 / 668 * 100vh);
 }
 .cover__description-text {
   font-weight: 700;
@@ -166,16 +136,17 @@ header {
   .header__theme-menu {
     padding-top: 192px;
     padding-right: 10px;
+    margin-bottom: 10px;
   }
   .header__title {
-    padding-top: 175px;
+    
     padding-left: 0;
     font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
   }
   .cover__description {
     width: 364px;
     height: 117px;
-    margin-top: 163px;
+    margin-bottom: 183px;
     margin-right: 20px;
   }
   .header__record {
@@ -200,17 +171,17 @@ header {
     display: flex;
     justify-content: center;
     padding-top: 20px;
+    margin-bottom: 177px;
   }
   .header__title {
-    padding-top: 291px;
+    
     padding-left: 0px;
     font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
   }
   .cover__description {
     width: 491px;
-    height: 71px;
     margin: 20px;
-    margin-top: 130px;
+    margin-bottom: 134px;
   }
   .header__record {
     top: 21px;
@@ -231,7 +202,7 @@ header {
 /* Ссылка */
 .link {
   text-decoration: none;
-  text-shadow: 1px 1px 0 var(--accent-color);
+  text-shadow: 1px 1px 0 var(--link-shadow-color);
 }
 .link:hover {
   border-bottom: 1px solid var(--card-text-color);
@@ -265,6 +236,7 @@ header {
 }
 .section__card-list {
   margin: 10px;
+  margin-top: 20px;
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -273,9 +245,17 @@ header {
 .title-bold {
   color: var(--bold-text-color);
   font-weight: bold;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
 @media (768px <= width < 1024px) {
+  .div {
+    padding-top: 10px;
+  }
+  .section__card-list {
+    margin-top: 10px;
+  }
   .section {
     margin-right: 10px;
     margin-left: 10px;
@@ -285,8 +265,9 @@ header {
   }
   .title-bold {
     margin-top: 20px;
+    margin-bottom: 20px;
   }
-  .first-type {
+  .two-column {
     display: grid;
     grid-template-columns: 1fr 2fr;
     margin-top: 50px;
@@ -305,13 +286,19 @@ header {
     width: 236px;
     height: 70px;
   }
-  .third-type {
+  .grid-type {
     display: grid;
     grid-template-columns: 1fr 2fr;
     gap: 7px;
   }
 }
 @media (width >= 1024px) and (height >= 768px) {
+  .div {
+    padding-top: 10px;
+  }
+  .section__card-list {
+    margin-top: 10px;
+  }
   .section {
     margin-right: 10px;
     margin-left: 10px;
@@ -321,9 +308,10 @@ header {
   }
   .title-bold {
     margin-top: 20px;
+    margin-bottom: 20px;
   }
 
-  .first-type {
+  .two-column {
     display: grid;
     grid-template-columns: 1fr 2fr;
     margin-top: 50px;
@@ -340,11 +328,11 @@ header {
     margin-bottom: 16px;
     padding-top: 20px;
   }
-  .second-list {
+  .grid-list {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
   }
-  .third-type {
+  .grid-type {
     display: grid;
     grid-template-columns: 1fr 2fr;
   }
@@ -353,6 +341,7 @@ header {
 /* картиночки */
 .gallery {
   margin: 10px;
+  margin-bottom: 36px;
 }
 .gallery .card__title {
   margin-bottom: 10px;
@@ -423,7 +412,7 @@ header {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  margin-top: 40px;
+  
 }
 .footer__text {
   color: var(--main-color);
