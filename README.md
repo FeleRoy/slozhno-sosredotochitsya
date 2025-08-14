@@ -25,3 +25,5 @@
 * HTML5
 * CSS3
 * JavaScript
+
+[![Tech](https://skillicons.dev/icons?i=html,css,js&theme=light)](https://skillicons.dev)
